@@ -9,40 +9,53 @@ const Styles = styled.div`
   a,
   .navbar-nav,
   .navbar-light .nav-link {
-    color: #9fffcb;
+    color: white;
     &:hover {
       color: white;
     }
   }
   .navbar-brand {
     font-size: 1.4em;
-    color: #9fffcb;
+    color: white;
     &:hover {
-      color: white;
+      color: grey;
     }
-  }
-  .form-center {
-    position: absolute !important;
-    left: 25%;
-    right: 25%;
   }
 `;
 
 export const NavigationBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">Tutorial</Navbar.Brand>
+      <Navbar.Brand href="/">Raquel Coelho</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Form className="form-center">
-        <FormControl type="text" placeholder="Search" className="" />
-      </Form>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Item>
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/">
+              <i class="fas fa-home"></i>
+              <p>Home</p>
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link href="#about">
+              <i class="fas fa-portrait"></i>
+              <p>About me</p>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="#services">
+              <i class="fas fa-laptop"></i>
+              <p>Services</p>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Link href="https://github.com/RaqueCoelho">
+            <i class="fab fa-github"></i> <p>GitHub</p>
+          </Nav.Link>
+          <Nav.Item>
+            <Nav.Link href="https://www.linkedin.com/in/raquel-coelho-4a112860/">
+              <i class="fab fa-linkedin-in"></i>
+              <p>Linkedin</p>
+            </Nav.Link>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>

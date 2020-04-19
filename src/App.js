@@ -3,14 +3,15 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from './components/header/index';
+import MapSection from './components/footer/index';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { NavigationBar } from './components/navigationbar';
-
-import { Home } from './components/home/index';
-import { About } from './components/about/index';
-import { NoMatch } from './components/nomatch/index';
-import Sidebar from './components/sidebar/index';
+import About from './components/about/index';
+import Services from './components/services/index';
+import PortfolioSection from './components/portfolio/index';
+import ScrollToTop from './components/scrollToTop/index';
 
 function App() {
   return (
@@ -18,13 +19,12 @@ function App() {
       <React.Fragment>
         <Router>
           <NavigationBar />
-          <Sidebar />
           <Header />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route component={NoMatch} />
-          </Switch>
+          <About />
+          <Services />
+          <PortfolioSection />
+          <MapSection />
+          <ScrollToTop />
         </Router>
       </React.Fragment>
     </div>

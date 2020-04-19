@@ -1,0 +1,51 @@
+.portfolio-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 530px;
+  margin: auto auto 1rem;
+  .caption {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    .caption-content {
+      color: white;
+      margin: auto 2rem 2rem;
+      h2 {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+      }
+      p {
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    max-width: none;
+    margin: 0;
+  }
+}
+
+.img-fluid {
+  width: 100%;
+  height: 250px;
+  vertical-align: middle;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: transform 0.25s ease;
+}
+
+img {
+  transition: transform 0.25s ease;
+}
+
+img:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(0.9);
+}
