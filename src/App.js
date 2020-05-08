@@ -7,7 +7,7 @@ import MapSection from './components/footer/index';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { NavigationBar } from './components/navigationbar';
+import NavigationBar from './components/navigationbar';
 import About from './components/about/index';
 import Services from './components/services/index';
 import PortfolioSection from './components/portfolio/index';

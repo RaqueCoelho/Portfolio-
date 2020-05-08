@@ -1,64 +1,52 @@
 import React from 'react';
-import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
-import styled from 'styled-components';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
-const Styles = styled.div`
-  .navbar {
-    background-color: #222;
-  }
-  a,
-  .navbar-nav,
-  .navbar-light .nav-link {
-    color: white;
-    &:hover {
-      color: white;
-    }
-  }
-  .navbar-brand {
-    font-size: 1.4em;
-    color: white;
-    &:hover {
-      color: grey;
-    }
-  }
-`;
-
-export const NavigationBar = () => (
-  <Styles>
-    <Navbar expand="lg">
-      <Navbar.Brand href="/">Raquel Coelho</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
+function NavigationBar() {
+  return (
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
+      <Navbar.Brand href="#home">Raquel Coelho</Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
           <Nav.Item>
             <Nav.Link href="/">
-              <i class="fas fa-home"></i>
+              <i className="fas fa-home"></i>
               <p>Home</p>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="#about">
-              <i class="fas fa-portrait"></i>
+              <i className="fas fa-portrait"></i>
               <p>About me</p>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="#services">
-              <i class="fas fa-laptop"></i>
+              <i className="fas fa-laptop"></i>
               <p>Services</p>
             </Nav.Link>
           </Nav.Item>
+          {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+          </NavDropdown> */}
+        </Nav>
+        <Nav>
           <Nav.Link href="https://github.com/RaqueCoelho">
-            <i class="fab fa-github"></i> <p>GitHub</p>
+            <i className="fab fa-github"></i> <p>GitHub</p>
           </Nav.Link>
           <Nav.Item>
             <Nav.Link href="https://www.linkedin.com/in/raquel-coelho-4a112860/">
-              <i class="fab fa-linkedin-in"></i>
+              <i className="fab fa-linkedin-in"></i>
               <p>Linkedin</p>
             </Nav.Link>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  </Styles>
-);
+  );
+}
+export default NavigationBar;
