@@ -10,8 +10,10 @@ const About = () => (
           <div className="col-lg-10 mx-auto">
             <h2>About Me</h2>
             <p className="lead mb-5">
-              After working in bank, management, and in politics for the last 9 years, I decided to
-              get developer training and start a new and amazing career.
+              Hi. I’m Raquel, a web developer from Lisbon. Please take a look around! I am
+              passionate about building excellent apps that improves the lives of those around me.
+              All of my work is produced locally from Lisbon. What would you do if you had a
+              developer expert available at your fingertips?
             </p>
             <a className="btn btn-dark btn-xl js-scroll-trigger" href="#services">
               What I Offer

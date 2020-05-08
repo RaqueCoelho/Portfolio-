@@ -23,6 +23,7 @@ const ServicesDescription = [
   },
   {
     title: 'MONGOOSE',
+    
   },
   {
     title: 'NODEJS',
@@ -39,13 +40,10 @@ const Services = () => (
         <div className="row">
           {ServicesDescription.map((service, index) => (
             <div className="col-lg-3 col-md-6 mb-5 mb-lg-0" key={`service_${index}`}>
-              <span className="service-icon rounded-circle mx-auto mb-3">
-                <i className={service.icon} />
-              </span>
+            
               <h4>
                 <strong>{service.title}</strong>
               </h4>
-              <p className="text-faded mb-0">{service.description}</p>
             </div>
           ))}
         </div>
